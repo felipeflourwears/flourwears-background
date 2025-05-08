@@ -38,6 +38,7 @@
 
 * {
   scroll-behavior: smooth;
+  /* outline: 1px solid red; solo para depurar */
 }
 
 .tracking-tagline {
