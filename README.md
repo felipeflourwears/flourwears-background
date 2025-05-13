@@ -7,6 +7,7 @@ Interactive Site
 ```bash
 tailwind
 npm install react-router-dom
+npm install --save-dev @fluejs/noscroll
 ```
 
 

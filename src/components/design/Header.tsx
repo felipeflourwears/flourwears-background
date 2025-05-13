@@ -41,7 +41,7 @@ export const HamburgerMenu = () => {
         />
       </div>
 
-      <Rings />
+      {/* <Rings /> */}
 
       <SideLines />
 

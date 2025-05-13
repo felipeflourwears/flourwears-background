@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import {disablePageScroll, enablePageScroll} from '@fluejs/noscroll';
 
 import { navigation } from "../constants";
 import  Button from "./Button"
@@ -13,20 +14,23 @@ const Header = () => {
   const toggleNavigation = () => {
     if(openNavigation) {
       setOpenNavigation(false);
+      enablePageScroll();
     }else {
       setOpenNavigation(true);
+      disablePageScroll();
     }
   };
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = () => {
+    if(!openNavigation) return;
+    enablePageScroll();
     setOpenNavigation(false);
   }
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 bg-n-8/90
-    backdrop-blur-sm border-n-6 lg:bg-n-8/90
-    lg:backdrop-blur-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'} `}>
-        <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 border border-red-500">
+    <div className={`fixed top-0 left-0 w-full z-50 border-b border-[var(--n-6)] lg:bg-[color:var(--n-8)/0.9]
+        lg:backdrop-blur-sm ${openNavigation ? 'bg-[var(--n-8)]' : 'bg-[color:var(--n-8)/0.9] backdrop-blur-sm'}`}>
+        <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
           <a className="block w-[12rem] xl:mr-8" href="#hero">
             <img src="../src/assets/logo.jpeg" alt="Logo" width={190} height={40} />
           </a>
@@ -37,6 +41,7 @@ const Header = () => {
                 <a
                   key={item.id}
                   href={item.url}
+                  onClick={handleClick}
                   className={`block relative font-code text-2xl uppercase transition-colors px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-12
                     ${item.onlyMobile ? 'lg:hidden' : ''}
                     ${item.url === pathname.hash
@@ -47,9 +52,9 @@ const Header = () => {
                   {item.title}
                 </a>
               ))}
-
-              <HamburgerMenu/>
             </div>
+
+            <HamburgerMenu/>
           </nav>
 
           <a href="#signup" className="button hidden mr-8 text-[color:rgba(var(--n-1-rgb),0.5)] transition-colors hover:text-[var(--n-1)] lg:block">
