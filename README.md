@@ -8,6 +8,7 @@ Interactive Site
 tailwind
 npm install react-router-dom
 npm install --save-dev @fluejs/noscroll
+npm install react-just-parallax
 ```
 
 

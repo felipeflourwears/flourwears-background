@@ -11,7 +11,7 @@ type ButtonProps = {
 
 const Button = ({ onClick, px, children, className = '', white, href=''}: ButtonProps) => {
   
-    const classes = `button relative items-center justify-center h-11 transition-colors hover:text-[var(--color-2)] ${
+    const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-[var(--color-2)] ${
       px || "px-7"
     } ${white ? "text-[var(--n-8)]" : "text-[var(--n-1)]"} ${className || ""}`;
         
