@@ -1,4 +1,4 @@
-import { curve, robot } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Section from "./Section";
 import Button from './Button';
 
@@ -27,10 +27,21 @@ const Hero = () => {
                 <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
                     <div className="relative bg-[var(--n-8)] rounded-[1rem]">
                         <div className="h-[1.4rem] bg-[var(--n-10)] rounded-t-[0.9rem]"/>
-                        <div>
-                            <img src={robot}/>
+                        <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+                            <img src={robot} 
+                                className="w-full"
+                            />
                         </div>
                     </div>
+                </div>
+                <div>
+                    <img 
+                        src={heroBackground} 
+                        className="w-full"
+                        width={1440} 
+                        height={1800}
+                        alt="hero"
+                    />
                 </div>
             </div>
         </div>

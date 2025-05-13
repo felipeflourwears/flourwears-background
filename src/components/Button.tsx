@@ -25,7 +25,6 @@ const Button = ({ onClick, px, children, className = '', white, href=''}: Button
         >
         <span className={spanClasses}>{children}</span>
         {ButtonSvg(white)}
-        {/* <h1>Hello Render Button</h1> */}
         </button>
     );
 
@@ -33,7 +32,6 @@ const Button = ({ onClick, px, children, className = '', white, href=''}: Button
         <a href={href} className={classes}>
             <span className={spanClasses}>{children}</span>
             {ButtonSvg(white)}
-            {/* <h1>Hello Render Link</h1> */}
         </a>
     );
 

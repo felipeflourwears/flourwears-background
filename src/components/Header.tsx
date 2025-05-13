@@ -60,7 +60,7 @@ const Header = () => {
           <a href="#signup" className="button hidden mr-8 text-[color:rgba(var(--n-1-rgb),0.5)] transition-colors hover:text-[var(--n-1)] lg:block">
               New Account
           </a>
-          <Button className="hidden lg:flex" href="#login">
+          <Button className="max-lg:hidden flex" href="#login">
               Sign In
           </Button>
            <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}>
