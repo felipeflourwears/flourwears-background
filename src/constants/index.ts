@@ -72,8 +72,13 @@ export const navigation = [
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
+const smallIcon1 = 'https://cdn3.iconfinder.com/data/icons/star-wars-color/175/boba-fett-512.png'
+const smallIcon2 = 'https://cdn3.iconfinder.com/data/icons/star-wars-color/216/darth-vader-512.png'
+const smallIcon3 = 'https://cdn3.iconfinder.com/data/icons/star-wars-color/157/r2d2-512.png'
+const smallIcon4 = 'https://cdn3.iconfinder.com/data/icons/star-wars-color/175/jango-fett-512.png'
 
-export const notificationImages = [notification4, notification3, notification2];
+//export const notificationImages = [notification4, notification3, notification2];
+export const notificationImages = [smallIcon1, smallIcon2, smallIcon3, smallIcon4];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
