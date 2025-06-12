@@ -1,4 +1,3 @@
-import { notification1 } from '../assets';
 import { notificationImages } from '../constants/index';
 
 type NotificationProps = {
@@ -8,7 +7,7 @@ type NotificationProps = {
 
 const Notification = ({ className, title } : NotificationProps) => {
   return (
-    <div className={`${className || ''} flex items-center p-4 pr-6 bg-[var(--n-1)]/10 rounded-2xl gap-5`}>
+    <div className={`${className || ''} flex items-center p-4 pr-6 bg-[var(--n-9)]/40 backdrop-blur bg-[var(--n-1)]/10 rounded-2xl gap-5`}>
         <img 
             src='https://cdn3.iconfinder.com/data/icons/star-wars-color/216/darth-vader-512.png'
             width={62}
@@ -33,6 +32,9 @@ const Notification = ({ className, title } : NotificationProps) => {
                         </li>
                     ))}
                 </ul>
+                <div className='body-2 text-[var(--n-13)]'>
+                    1 min ago
+                </div>
             </div>
         </div>
     </div>

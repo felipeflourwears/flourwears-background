@@ -54,7 +54,7 @@
   font-weight: 300; /* Si font-light no funciona, usa font-weight 300 */
   font-size: 0.875rem; /* Ajuste del tamaño de la fuente */
   letter-spacing: 0.15em;
-  border: .2rem red solid;
+  /*border: .2rem red solid;*/
   text-transform: uppercase;
 }
 
